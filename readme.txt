@@ -1,0 +1,1 @@
+A website built by James Whicker to share content regarding using the popular card game Magic the Gathering to learn natural languages
