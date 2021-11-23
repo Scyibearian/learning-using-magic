@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+{% for word in object_list %}
+
+<a>{{ word.eng_trans }}</a>
+
+
+{% endfor %}
+
+
+
+<!-- <form method='POST'>  {% csrf_token %}
+  {{ form.as_p }}
+<input type='submit' value='Save' />
+</form> -->
+
+
+{% endblock %}

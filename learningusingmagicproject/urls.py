@@ -16,10 +16,16 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from learningusingmagicapp import views
+
+from learningusingmagicapp.views import *
 
 from learningusingmagicapp.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index)
+    path('', index),
+
+    path('glossary/', GlossaryView.as_view(),
+         name="glossary" ),
 ]
