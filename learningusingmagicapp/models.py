@@ -18,8 +18,8 @@ class Word(models.Model):
     def __str__(self):
         return self.eng_trans
 
-    def get_absolute_url(self):
-        return reverse("word_lookup", kwargs={"pk": self.pk})  
+    # def get_absolute_url(self):
+    #     return reverse("word", kwargs={"pk": self.pk})  
 
     def class_name(self):
         return self.__class__.__name__

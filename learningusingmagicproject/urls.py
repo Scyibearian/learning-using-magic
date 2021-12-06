@@ -20,11 +20,10 @@ from learningusingmagicapp import views
 
 from learningusingmagicapp.views import *
 
-from learningusingmagicapp.views import index
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    path('', views.home_view, 
+        name='home'),
 
     path('glossary/', GlossaryView.as_view(),
          name="glossary" ),

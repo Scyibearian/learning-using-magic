@@ -5,7 +5,7 @@ from django.views.generic.list import ListView
 from .models import Word
 # Create your views here.
 
-def index(request):
+def home_view(request):
     return render(request, 'base.html')
 
 #Glossary views
