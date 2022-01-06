@@ -26,5 +26,8 @@ urlpatterns = [
         name='home'),
 
     path('glossary/', GlossaryView.as_view(),
-         name="glossary" ),
+        name="glossary" ),
+    path('about/', views.about_view,
+        name='about')
+    
 ]

@@ -14,3 +14,5 @@ class GlossaryView(ListView):
     queryset = Word.objects.order_by('eng_trans')
     template_name = 'glossary/glossary.html'
     
+def about_view(request):
+    return render(request, 'about.html')
