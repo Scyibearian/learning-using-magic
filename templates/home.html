@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+{% for word in object_list %}
+  <tr style="border:1px solid black;">
+    <td data-label="English Translation">{{ word.eng_trans }}</td>
+    <!-- <a href="{{ word.get_absolute_url }}">{{ word.eng_trans }}</a> -->
+    <td data-label="Magic Definition" style="width:250px;">{{ word.magic_def }}</td>
+    <td data-label="German Translation">{{ word.german_trans }}</td>
+    <td data-label="Japanese Translation">{{ word.japanese_trans }}</td>
+    <td data-label="Furigana">{{ word.furigana }}</td>
+    <td data-label="Romaji">{{ word.romaji }}</td>
+    <td data-label="French Translation">{{ word.french_trans }}</td>
+    <td data-label="Literal Translation List">{{ word.lit_trans_list }}</td>
+    <td data-label="Example Card 1"><a class="imagelink" href="{{ word.example_card_1 }}"><img id="img1" src="{{ word.example_card_1 }}"></a></td>
+    <td data-label="Example Card 2"><a class="imagelink" href="{{ word.example_card_2 }}"><img id="img2" src="{{ word.example_card_2 }}"></a></td>
+  </tr>
+{% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

@@ -22,7 +22,7 @@ from learningusingmagicapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home_view, 
+    path('', HomeView.as_view(), 
         name='home'),
 
     path('glossary/', GlossaryView.as_view(),
