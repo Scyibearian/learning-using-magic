@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from django.views.generic.list import ListView
+#from django.views.generic.base import TemplateView
 
 from .models import Word
 # Create your views here.
@@ -15,7 +16,7 @@ class HomeView(ListView):
     words = list(Word.objects.all())
 
     try:
-        queryset = random.sample(words, 5)
+        queryset = random.sample(words, 6)
         print(queryset)
     except ValueError:
         print('Sample size exceeded population size.')
