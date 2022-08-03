@@ -16,7 +16,7 @@ class HomeView(ListView):
     words = list(Word.objects.all())
 
     try:
-        queryset = random.sample(words, 6)
+        queryset = random.sample(words, 12)
         print(queryset)
     except ValueError:
         print('Sample size exceeded population size.')
@@ -49,3 +49,6 @@ class GlossaryView(ListView):
     
 def about_view(request):
     return render(request, 'about.html')
+
+def ikoria_article_view(request):
+    return render(request, 'article/ikoriareich.html')

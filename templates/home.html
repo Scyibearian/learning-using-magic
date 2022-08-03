@@ -7,14 +7,14 @@
   .big-container {
     display: grid;
     gap: 5px;
-    background-color: #2196F3;
+    background-color: #ffffff;/*#2196F3;*/
     padding: 5px;
   }
 
   .grid-container {
     display: grid;
     gap: 5px;
-    background-color: #2196F3;
+    background-color: #ffffff;/*#2196F3;*/
     padding: 5px;
   }
   
@@ -37,7 +37,7 @@
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 5px;
-    font-size: 14px;
+    font-size: 15px;
   }
   
   .item1 {
@@ -73,7 +73,10 @@
   .item7 {
     grid-column: 5 / span 2;
     grid-row: 1 / span 8;
-    background-color: rgba(255, 255, 255);
+    /* background-color: rgba(255, 255, 255); */
+    padding: 0px;
+    width: 252px;
+    min-width: 252px;
   }
 
 </style>
@@ -86,7 +89,7 @@
     <div class="grid-item item3"><a class="imagelink" href="{{ object_list.0.example_card_2 }}"><img id="img2" src="{{ object_list.0.example_card_2 }}"></a></div>  
     <div class="grid-item item4"><a class="imagelink" href="{{ object_list.1.example_card_2 }}"><img id="img2" src="{{ object_list.1.example_card_2 }}"></a></div>
     <div class="grid-item item5">{{ object_list.1 }}</div>
-    <div class="grid-item item6">{{ object_list.1.german_trans }}</div>
+    <div class="grid-item item6">{{ object_list.1.french_trans }}</div>
     <div class="grid-item item7"><a href="https://www.amazon.co.uk/dp/B09M8XWXS9?_encoding=UTF8&aaxitk=e782152a97b1cda6bbc967ea5396e38a&content-id=amzn1.sym.e4f48e2a-4f4e-495a-a95b-34f114e19c84%3Aamzn1.sym.e4f48e2a-4f4e-495a-a95b-34f114e19c84&hsa_cr_id=7726497690202&pd_rd_plhdr=t&pd_rd_r=1fbc2ec5-088d-42a2-8e73-e9087bd879f6&pd_rd_w=xeYmm&pd_rd_wg=TUZdb&qid=1657206935&sr=1-2-fd947bf3-57d2-4cc9-939d-2805f92cef28&linkCode=li3&tag=cybercommerce-21&linkId=e84e3648610977497a3339fb01a673b3&language=en_GB&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09M8XWXS9&Format=_SL250_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=cybercommerce-21&language=en_GB" ></a><img src="https://ir-uk.amazon-adsystem.com/e/ir?t=cybercommerce-21&language=en_GB&l=li3&o=2&a=B09M8XWXS9" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></div>
   </div>
 
@@ -96,19 +99,77 @@
     <div class="grid-item item3"><a class="imagelink" href="{{ object_list.2.example_card_2 }}"><img id="img2" src="{{ object_list.2.example_card_2 }}"></a></div>  
     <div class="grid-item item4"><a class="imagelink" href="{{ object_list.3.example_card_2 }}"><img id="img2" src="{{ object_list.3.example_card_2 }}"></a></div>
     <div class="grid-item item5">{{ object_list.3 }}</div>
-    <div class="grid-item item6">{{ object_list.3.german_trans }}</div>
+    <div class="grid-item item6">{{ object_list.3.japanese_trans }}</div>
     <div class="grid-item item7"><a href="https://www.amazon.co.uk/dp/B084P3L4R7?_encoding=UTF8&aaxitk=e782152a97b1cda6bbc967ea5396e38a&content-id=amzn1.sym.e4f48e2a-4f4e-495a-a95b-34f114e19c84%3Aamzn1.sym.e4f48e2a-4f4e-495a-a95b-34f114e19c84&hsa_cr_id=7726497690202&pd_rd_plhdr=t&pd_rd_r=1fbc2ec5-088d-42a2-8e73-e9087bd879f6&pd_rd_w=xeYmm&pd_rd_wg=TUZdb&qid=1657206935&sr=1-3-fd947bf3-57d2-4cc9-939d-2805f92cef28&linkCode=li3&tag=cybercommerce-21&linkId=6d39c50ef1d40698e0852001239d01f5&language=en_GB&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B084P3L4R7&Format=_SL250_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=cybercommerce-21&language=en_GB" ></a><img src="https://ir-uk.amazon-adsystem.com/e/ir?t=cybercommerce-21&language=en_GB&l=li3&o=2&a=B084P3L4R7" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></div>
   </div>
 
   <div class="grid-container container3">
     <div class="grid-item item1">{{ object_list.4 }}</div>
     <div class="grid-item item2">{{ object_list.4.german_trans }}</div>
-    <div class="grid-item item3"><a class="imagelink" href="{{ object_list.4.example_card_2 }}"><img id="img2" src="{{ object_list.4.example_card_2 }}"></a></div>  
+    <div class="grid-item item3"><a class="imagelink" href="{{ object_list.4.example_card_2 }}"><img id="img1" src="{{ object_list.4.example_card_2 }}"></a></div>  
     <div class="grid-item item4"><a class="imagelink" href="{{ object_list.5.example_card_2 }}"><img id="img2" src="{{ object_list.5.example_card_2 }}"></a></div>
     <div class="grid-item item5">{{ object_list.5 }}</div>
-    <div class="grid-item item6">{{ object_list.5.german_trans }}</div>
+    <div class="grid-item item6">{{ object_list.5.french_trans }}</div>
   </div>
 </div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+Welcome to Learning Using Magic, a website that aims to further the progress of those using the popular card game Magic the Gathering to learn natural languages, with a focus on assisting native English speakers with articles and a Magic-focussed glossary tool.
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div class="big-container">
+  <div class="grid-container container1">
+    <div class="grid-item item1">{{ object_list.6 }}</div>
+    <div class="grid-item item2">{{ object_list.6.french_trans }}</div>
+    <div class="grid-item item3"><a class="imagelink" href="{{ object_list.6.example_card_2 }}"><img id="img2" src="{{ object_list.6.example_card_2 }}"></a></div>  
+    <div class="grid-item item4"><a class="imagelink" href="{{ object_list.7.example_card_2 }}"><img id="img2" src="{{ object_list.7.example_card_2 }}"></a></div>
+    <div class="grid-item item5">{{ object_list.7 }}</div>
+    <div class="grid-item item6">{{ object_list.7.german_trans }}</div>
+    <div class="grid-item item7"><a href="https://www.amazon.co.uk/dp/B084P3L4R7?_encoding=UTF8&aaxitk=e782152a97b1cda6bbc967ea5396e38a&content-id=amzn1.sym.e4f48e2a-4f4e-495a-a95b-34f114e19c84%3Aamzn1.sym.e4f48e2a-4f4e-495a-a95b-34f114e19c84&hsa_cr_id=7726497690202&pd_rd_plhdr=t&pd_rd_r=1fbc2ec5-088d-42a2-8e73-e9087bd879f6&pd_rd_w=xeYmm&pd_rd_wg=TUZdb&qid=1657206935&sr=1-3-fd947bf3-57d2-4cc9-939d-2805f92cef28&linkCode=li3&tag=cybercommerce-21&linkId=6d39c50ef1d40698e0852001239d01f5&language=en_GB&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B084P3L4R7&Format=_SL250_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=cybercommerce-21&language=en_GB" ></a><img src="https://ir-uk.amazon-adsystem.com/e/ir?t=cybercommerce-21&language=en_GB&l=li3&o=2&a=B084P3L4R7" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;"  /></div>
+  </div>
+
+  <div class="grid-container container2">
+    <div class="grid-item item1">{{ object_list.8 }}</div>
+    <div class="grid-item item2">{{ object_list.8.japanese_trans }}</div>
+    <div class="grid-item item3"><a class="imagelink" href="{{ object_list.8.example_card_2 }}"><img id="img2" src="{{ object_list.8.example_card_2 }}"></a></div>  
+    <div class="grid-item item4"><a class="imagelink" href="{{ object_list.9.example_card_2 }}"><img id="img2" src="{{ object_list.9.example_card_2 }}"></a></div>
+    <div class="grid-item item5">{{ object_list.9 }}</div>
+    <div class="grid-item item6">{{ object_list.9.french_trans }}</div>
+    <div class="grid-item item7"><a href="https://www.amazon.co.uk/dp/B09M8XWXS9?_encoding=UTF8&aaxitk=e782152a97b1cda6bbc967ea5396e38a&content-id=amzn1.sym.e4f48e2a-4f4e-495a-a95b-34f114e19c84%3Aamzn1.sym.e4f48e2a-4f4e-495a-a95b-34f114e19c84&hsa_cr_id=7726497690202&pd_rd_plhdr=t&pd_rd_r=1fbc2ec5-088d-42a2-8e73-e9087bd879f6&pd_rd_w=xeYmm&pd_rd_wg=TUZdb&qid=1657206935&sr=1-2-fd947bf3-57d2-4cc9-939d-2805f92cef28&linkCode=li3&tag=cybercommerce-21&linkId=e84e3648610977497a3339fb01a673b3&language=en_GB&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09M8XWXS9&Format=_SL250_&ID=AsinImage&MarketPlace=GB&ServiceVersion=20070822&WS=1&tag=cybercommerce-21&language=en_GB" ></a><img src="https://ir-uk.amazon-adsystem.com/e/ir?t=cybercommerce-21&language=en_GB&l=li3&o=2&a=B09M8XWXS9" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;"/></div>
+  </div>
+
+  <div class="grid-container container3">
+    <div class="grid-item item1">{{ object_list.10 }}</div>
+    <div class="grid-item item2">{{ object_list.10.german_trans }}</div>
+    <div class="grid-item item3"><a class="imagelink" href="{{ object_list.10.example_card_2 }}"><img id="img2" src="{{ object_list.10.example_card_2 }}"></a></div>  
+    <div class="grid-item item4"><a class="imagelink" href="{{ object_list.11.example_card_2 }}"><img id="img2" src="{{ object_list.11.example_card_2 }}"></a></div>
+    <div class="grid-item item5">{{ object_list.11 }}</div>
+    <div class="grid-item item6">{{ object_list.11.french_trans }}</div>
+  </div>
+</div>
+
 
 
 

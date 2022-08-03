@@ -28,6 +28,9 @@ urlpatterns = [
     path('glossary/', GlossaryView.as_view(),
         name="glossary" ),
     path('about/', views.about_view,
-        name='about')
-    
+        name='about'),
+    #path('articles', ArticleView.as_view(), name="articles"),
+    path('article/ikoria_article', views.ikoria_article_view,
+        name='ikoria_article')
+
 ]
