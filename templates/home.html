@@ -4,6 +4,14 @@
 {% block content %}
 
 <style>
+  table {
+    border-collapse: separate;
+    border-spacing: 40px 0;
+  }
+  td {
+    padding: 8px 0;
+  }
+
   .big-container {
     display: grid;
     gap: 5px;
@@ -82,6 +90,8 @@
 </style>
 
 
+<p style="margin-left:10px;margin-top:5px;">Welcome to Learning Using Magic, a website that aims to further the progress of those using the popular card game Magic the Gathering to learn natural languages, with a focus on assisting native English speakers with articles and a Magic-focussed glossary tool.</p>
+
 <div class="big-container">
   <div class="grid-container container1">
     <div class="grid-item item1">{{ object_list.0 }}</div>
@@ -113,29 +123,52 @@
   </div>
 </div>
 
+<div style="display: flex;">
+  <div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <div class="glossary-table" style="width:max-content;margin-top:20px;margin-left:20px;">
+      <table style="border:1px solid black;">
+        <thead>
+          <tr style="border:1px solid black;">
+            <th>English Translation</th>
+            <th>German Translation</th>
+            <th>Japanese Translation</th>
+            <th>French Translation</th>
+          </tr>
+        </thead>
+        <tbody style="text-align: center;">
+      
+    {% for word in object_list|slice:":4" %}
+      <tr style="border:1px solid black;">
+        <td data-label="English Translation">{{ word.eng_trans }}</td>
+        <td data-label="German Translation">{{ word.german_trans }}</td>
+        <td data-label="Japanese Translation">{{ word.japanese_trans }}</td>
+        <td data-label="French Translation">{{ word.french_trans }}</td>
+      </tr>
+    {% endfor %}
+    <tr style="border:1px solid black;">
+      <td data-label="English Translation">...</td>
+      <td data-label="German Translation">...</td>
+      <td data-label="Japanese Translation">...</td>
+      <td data-label="French Translation">...</td>
+    <!-- </tr>
+    <td></td>
+    <td></td>
+    <td style="text-align:left;">View More</td>
+    <tr> -->
+        </tbody>
+      </table>
+      <figcaption style="text-align: center;"><a href="{% url 'glossary' %}">View More</a></figcaption>
+    </div>
 
-Welcome to Learning Using Magic, a website that aims to further the progress of those using the popular card game Magic the Gathering to learn natural languages, with a focus on assisting native English speakers with articles and a Magic-focussed glossary tool.
+
+  </div>
+  <div>
+    
+  </div>
+</div>
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 
 

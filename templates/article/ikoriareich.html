@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
 
+{% load static %}
 
 {% block content %}
 
 <style type="text/css">
+    pre {
+        font-size: 18px; 
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
     .grid-wrapper {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
@@ -124,7 +130,7 @@
 
         <p style="font-size: 20px;">Ikoria, Lair of Behemoths is a set that brings to life the fantasy of a land teeming with monsters of all kinds. This makes for some quite interesting language learning.</p>
         
-        <pre style="font-size: 18px; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+        <pre>
             When using Magic the Gathering to learn languages, it can be beneficial to play with a friend to help each other understand and to make the experience more memorable for
         better vocabulary recollection. I bought a couple of bundle boxes of German Ikoria and did a draft with each of them with a friend. A bundle is ideal for 2 people to do a draft,
         with 3 packs each for drafting with 4 leftover comprising 3 packs for the winner of the draft and 1 pack for the loser of the draft. Whilst it doesn’t make for an authentic 
@@ -144,7 +150,7 @@
         </div>
     
 
-        <pre style="font-size: 18px; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+        <pre>
             Ikoria features a new mechanic called Mutate which allows creatures to merge with creatures already on the battlefield under the caster's control by paying an alternative
         casting cost. A mutated creature has the name, converted mana cost, colour identity, types, power and toughness of the creature at the top of the mutation pile and has the
         abilities of the top creature and of all those creature below it. A good way of playing with mutated creatures is to have the top creature fully visible and all creatures
@@ -155,23 +161,31 @@
         die du besitzt. Sie mutieren zur oben liegenden Kreatur, die zusätzlich alle Fähigkeiten der darunter liegenden hat."</em> "Falls" is a word that like "wenn" translates to "if".
         However, "falls" always translates to "if", but the more commonly used "wenn" can also translate to "when", therefore using "falls" stresses the conditional.
 
-        Cycling is simpler but can be just as intersting, the nature of randomness of drawing cards means exchanging a potentially bad card for a better card is a core part of most card games 
+        Cycling is simpler but can be just as interesting, the nature of randomness of drawing cards means exchanging a potentially bad card for a better card is a core part of most card games 
         Now onto the game. Jetzt spielen wir.
 
         </pre>
 
-        <div class="grid-container">
-            <div class="grid-item" style="grid-column: 1; grid-row: 1 / span 3;">
-                We start off in typical fashion with a roll off to determine which decks plays first. The mutation deck wins the rolls off and is on the play, not the draw. The mutation deck is a<br>
-                Sultai (blue, black and green) deck and the cycling deck is a Jeskai (white, black and red) deck. The articles on this website assume relatively little knowledge of Magic the<br>
-                Gathering or the German language, but still aim to provide useful information for both advanced Magic players and for advanced second language German speakers.
+        <div class="grid-container" style="grid-template-rows: repeat(4, 1fr);">
+            <div class="grid-item" style="grid-column: 1; grid-row: 1;">
+            <pre>
+We start off in typical fashion with a roll off to determine which decks plays first. The mutation deck wins the 
+roll off and is on the play, not the draw. The mutation deck is a Sultai (blue, black and green) deck and the cycling
+deck is a Jeskai (white, blue and red) deck. The  articles on this website assume relatively little knowledge of Magic
+the Gathering or the German language, but still aim to provide useful information for both advanced Magic players
+and for advanced second language German speakers.</pre>
             </div>
-            <div class="grid-item" style="grid-column: 1; grid-row: 4 / span 9;"><img id="img2" style="height: 400px; width: 315;" src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/3/b3d487d9-315c-4139-b75e-e73d959897b3.jpg?1645624849"></div>
-            <div class="grid-item" style="grid-column: 2; grid-row: 1 / span 9;"><img id="img2" style="height: 400px; width: 315;" src="https://c1.scryfall.com/file/scryfall-cards/normal/front/b/3/b3d487d9-315c-4139-b75e-e73d959897b3.jpg?1645624849"></div>
+            <div class="grid-item" style="grid-column: 1; grid-row: 2 / span 4;"><figure><img style="height: 450px; width: 600px;" src="{% static 'img/ikoria_article/rolloff.jpg' %}"><figcaption><em>Dice roll to determine first player</em></figcaption></figure></div>
+            <div class="grid-item" style="grid-column: 2; grid-row: 1 / span 4;"><img style="height: 600px; width: 450px;" src="{% static 'img/ikoria_article/startinghands.jpg' %}""><figcaption><em>Starting hands</em></figcaption></figure></div>
         </div>
 
+        <pre>
+            Both players draw their hands and do not mulligan. The mutation player is quite lucky to have all 3 mana colours of their deck available in their opening hand, 
+        the cycling deck has white and blue to start with, but no red and hopes to draw or cycle into this mana colour. Mutation plays an island for turn – Mutation
+        spielt eine Inseln für **Zug** – and passes. Cycling draws a card – Umwandlung zieht eine Karte – and plays             
+        </pre>
 
-        <br>
+        
         <br>
         <br>
     </div>
