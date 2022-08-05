@@ -20,6 +20,9 @@ from learningusingmagicapp import views
 
 from learningusingmagicapp.views import *
 
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeView.as_view(), 
@@ -34,3 +37,5 @@ urlpatterns = [
         name='ikoria_article')
 
 ]
+
+urlpatterns += staticfiles_urlpatterns()

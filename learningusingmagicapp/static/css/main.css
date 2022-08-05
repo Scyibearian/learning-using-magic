@@ -10850,3 +10850,43 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+
+.button {
+  border-radius: 5px;
+  border-style: solid;
+  box-sizing: border-box;
+  border-width: 2px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 4px 16px 4px 16px;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.button-primary {
+  background-color: #B6985A;
+  border-color: #B6985A;
+  color: #241E12;
+}
+.button-primary:hover {
+  background-color: #927A48;
+  border-color: #927A48;
+}
+.button-primary:focus {
+  box-shadow: 0 0 0 0.2rem #E2D6BD;
+}
+
+.button-secondary {
+  border-color: #577DA0;
+  color: #577DA0;
+}
+.button-secondary:hover {
+  background-color: #577DA0;
+  color: #FFF;
+}
+.button-secondary:focus {
+  box-shadow: 0 0 0 0.2rem #C0CEDB;
+}
+
