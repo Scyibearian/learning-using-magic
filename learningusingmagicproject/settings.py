@@ -21,7 +21,7 @@ with open(os.path.join(BASE_DIR, 'secretkey.txt')) as f:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["http://localhost:8000/", "http://127.0.0.1:8000/", "learningusingmagic.herokuapp.com"]
 
 
 # Application definition
