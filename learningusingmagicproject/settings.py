@@ -9,6 +9,10 @@ from pathlib import Path
 
 import django_heroku
 
+from django.utils.log import DEFAULT_LOGGING
+
+DEFAULT_LOGGING['handlers']['console']['filters'] = []
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 print(BASE_DIR)
@@ -126,7 +130,7 @@ STATIC_ROOT = os.path.join(BASE_DIR.absolute(), 'learningusingmagicapp\static')
 print(STATIC_ROOT)
 
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
