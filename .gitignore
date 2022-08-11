@@ -1,5 +1,6 @@
 # Learning Using Magic #
 secretkey.txt
+datadump.json
 
 # Django #
 *.log
