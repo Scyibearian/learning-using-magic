@@ -27,7 +27,7 @@ media
 *.iws /out/ 
 
 # Python # 
-
+*.py[cod] 
 *$py.class 
 
 # Distribution / packaging 
