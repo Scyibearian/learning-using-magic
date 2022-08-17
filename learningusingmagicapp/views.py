@@ -32,15 +32,12 @@ class HomeView(ListView):
 
 #Glossary views
 class GlossaryView(ListView):
-    print("myguy1")
     #model = Lot
     queryset = Word.objects.order_by('eng_trans')
     template_name = 'glossary/glossary.html'
     
 def about_view(request):
-    print("myguy2")
     return render(request, 'about.html')
 
 def ikoria_article_view(request):
-    print("myguy3")
     return render(request, 'article/ikoriareich.html')
