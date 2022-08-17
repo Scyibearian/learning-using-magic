@@ -27,7 +27,7 @@ print(BASE_DIR)
 SECRET_KEY = os.environ.get('DJANGO_LUM_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "learningusingmagic.herokuapp.com"]
 
@@ -87,10 +87,10 @@ DATABASES = {
     }
 }
 
-#import dj_database_url
+import dj_database_url
 
-#db_from_env = dj_database_url.config()
-#DATABASES['default'].update(db_from_env)
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

@@ -12,43 +12,35 @@ import random
 
 class HomeView(ListView):
     template_name = 'home.html'
+    model = Word
 
-    words = list(Word.objects.all())
+    #words = list(Word.objects.all())
+    # words = Word.objects.order_by('eng_trans')
 
-    try:
-        queryset = random.sample(words, 12)
-        print(queryset)
-    except ValueError:
-        print('Sample size exceeded population size.')
-        queryset = Word.objects.order_by('eng_trans')
-
-
-
-
-    # num_words = Word.objects.count()
     # try:
-    #     random.sample(range(1, num_words), 5)
-
+    #     #queryset = random.sample(words, 12)
+    #     #print(queryset)
+    #     print('try')
     # except ValueError:
     #     print('Sample size exceeded population size.')
+    #     queryset = Word.objects.order_by('eng_trans')
 
-    # queryset = Word.objects.order_by('eng_trans')
+    def get_queryset(self):
+        object_list = self.model.objects.order_by('?')[:12]
+        return object_list
 
-        # def get_queryset(self):
-        #     object_list = Word.objects.order_by('-id') #Order by most recent first
-        #     #for object in object_list:
-        #         #object.time += timedelta(hours=1)
-        #         #object.time = timezone.localtime(object.time) #localtime() cannot be applied to a naive datetime
-        #     return object_list
 
 #Glossary views
 class GlossaryView(ListView):
+    print("myguy1")
     #model = Lot
     queryset = Word.objects.order_by('eng_trans')
     template_name = 'glossary/glossary.html'
     
 def about_view(request):
+    print("myguy2")
     return render(request, 'about.html')
 
 def ikoria_article_view(request):
+    print("myguy3")
     return render(request, 'article/ikoriareich.html')
