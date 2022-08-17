@@ -6,6 +6,10 @@
 
 <style>
 
+  a {
+    text-decoration: none !important;
+  }
+
   table {
     border-collapse: separate;
     border-spacing: 40px 0;
@@ -186,17 +190,17 @@
       </header>
       
       <main class="leaderboard__profiles">
-        <article class="leaderboard__profile">
+        <a href="{% url 'ikoria_article' %}"><article class="leaderboard__profile">
           <img src="https://c1.scryfall.com/file/scryfall-cards/art_crop/front/c/9/c9f07625-fbd8-4581-8568-eb3cfb2a4c1e.jpg?1591227964" alt="Brokkos" class="leaderboard__picture">
           <span class="leaderboard__name">An in-depth look at German Ikoria, Reich der Behemoths</span>
 
-        </article>
+        </article></a>
         
-        <article class="leaderboard__profile">
+        <a href="{% url 'ikoria_article' %}"><article class="leaderboard__profile">
           <img src="https://c1.scryfall.com/file/scryfall-cards/art_crop/front/1/4/14dc88ee-bba9-4625-af0d-89f3762a0ead.jpg?1631048621" alt="Tergrid" class="leaderboard__picture">
           <span class="leaderboard__name">Showcase of multi-language commander deck - Tergrid</span>
 
-        </article>
+        </article></a>
         
       </main>
       <figcaption style="text-align: center;padding-bottom: 15px;"><a  class="button button-secondary" href="{% url 'ikoria_article' %}">View More</a></figcaption>
