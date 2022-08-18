@@ -30,6 +30,11 @@ urlpatterns = [
 
     path('glossary/', GlossaryView.as_view(),
         name="glossary" ),
+    path('glossary/search/', GlossaryView.as_view(),
+         name ="glossary_search"),
+    path('glossary/search/<str:q>/', GlossaryView.as_view(),
+         name ="glossary_search"),
+
     path('about/', views.about_view,
         name='about'),
     #path('articles', ArticleView.as_view(), name="articles"),

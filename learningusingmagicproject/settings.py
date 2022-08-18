@@ -27,7 +27,7 @@ print(BASE_DIR)
 SECRET_KEY = os.environ.get('DJANGO_LUM_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ['DJANGO_DEBUG_SETTING'] == 'TRUE'
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "learningusingmagic.herokuapp.com"]
 

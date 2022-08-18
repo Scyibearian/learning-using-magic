@@ -4,37 +4,39 @@ from django.views.generic.list import ListView
 #from django.views.generic.base import TemplateView
 
 from .models import Word
+
+from django.db.models import Q
 # Create your views here.
 import random
-
-#def home_view(request):
-#    return render(request, 'home.html')
 
 class HomeView(ListView):
     template_name = 'home.html'
     model = Word
 
-    #words = list(Word.objects.all())
-    # words = Word.objects.order_by('eng_trans')
-
-    # try:
-    #     #queryset = random.sample(words, 12)
-    #     #print(queryset)
-    #     print('try')
-    # except ValueError:
-    #     print('Sample size exceeded population size.')
-    #     queryset = Word.objects.order_by('eng_trans')
 
     def get_queryset(self):
-        object_list = self.model.objects.order_by('?')[:12]
+        object_list = list(self.model.objects.all())
+        random.shuffle(object_list)
+        object_list = object_list[0:12] #cut everything but first 12 for efficiency
         return object_list
 
 
 #Glossary views
 class GlossaryView(ListView):
-    #model = Lot
+    model = Word
     queryset = Word.objects.order_by('eng_trans')
     template_name = 'glossary/glossary.html'
+
+    def get_queryset(self):
+        object_list = self.model.objects.order_by('-id') #Order by most recent first
+        search = self.kwargs.get('q') #get keyword argument contatining search query
+        #progress_filter = self.kwargs.get('progress_filter')
+        if search: #checking if user search in any attributes of customer
+            object_list = object_list.filter(
+                Q(eng_trans__icontains=search) |
+                Q(magic_def__icontains=search) |
+                Q(german_trans__icontains=search)).distinct()
+        return object_list
     
 def about_view(request):
     return render(request, 'about.html')

@@ -4,6 +4,27 @@
 
 {% block content %}
 
+<script type="text/javascript">
+
+  function searchqdetail() {
+     var searchTxt = document.getElementById('search').value;
+     var searchURL = "";
+     if(searchTxt != ""){
+      searchURL = "{% url 'glossary_search' %}" + searchTxt + "/";
+     }else{
+      searchURL = "{% url 'glossary_search' %}";
+     }
+     
+     window.location.href = searchURL;
+  }
+
+  function checkEnterKey() {
+    if (event.which == 13 || event.keyCode == 13) {
+      searchqdetail();
+    }
+  }
+</script>
+
 <style type="text/css">
   table {
     border-collapse: separate;
@@ -63,9 +84,18 @@
 </a>
 
 
+<div class="glossary-table" style="width:max-content;margin-top:15px;margin-left:20px;">
+  <div style="width: 400px;padding-left: 50px;padding-top: 10px;padding-bottom:10px;display: flex;gap:4px;">
+    <textarea style="margin: 0px;padding: 0px;resize: none;font-family: Arial, Helvetica, sans-serif;" id="search" onkeypress="checkEnterKey();" placeholder="Search for anything..." rows=1 cols="40"></textarea>
+    <button id = "searchbutton">Search</button>
+  </div>
+  
+  <script type="text/javascript">
+    document.getElementById('searchbutton').addEventListener("click", searchqdetail);
+  </script>
 
 
-<div class="glossary-table" style="width:max-content;margin-top:40px;margin-left:20px;">
+
   <table style="border:1px solid black;">
     <thead>
       <tr style="border:1px solid black;">
