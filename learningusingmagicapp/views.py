@@ -6,6 +6,7 @@ from django.views.generic.list import ListView
 from .models import Word
 
 from django.db.models import Q
+from django.db.models.functions import Lower
 # Create your views here.
 import random
 
@@ -24,19 +25,19 @@ class HomeView(ListView):
 #Glossary views
 class GlossaryView(ListView):
     model = Word
-    queryset = Word.objects.order_by('eng_trans')
+    queryset = Word.objects.order_by(Lower('eng_trans'))
     template_name = 'glossary/glossary.html'
 
-    def get_queryset(self):
-        object_list = self.model.objects.order_by('-id') #Order by most recent first
-        search = self.kwargs.get('q') #get keyword argument contatining search query
-        #progress_filter = self.kwargs.get('progress_filter')
-        if search: #checking if user search in any attributes of customer
-            object_list = object_list.filter(
-                Q(eng_trans__icontains=search) |
-                Q(magic_def__icontains=search) |
-                Q(german_trans__icontains=search)).distinct()
-        return object_list
+    # def get_queryset(self):
+    #     object_list = self.model.objects.order_by('eng_trans') #Order alphabetically
+    #     search = self.kwargs.get('q') #get keyword argument contatining search query
+    #     #progress_filter = self.kwargs.get('progress_filter')
+    #     if search: #checking if user search in any attributes of customer
+    #         object_list = object_list.filter(
+    #             Q(eng_trans__icontains=search) |
+    #             Q(magic_def__icontains=search) |
+    #             Q(german_trans__icontains=search)).distinct()
+    #     return object_list
     
 def about_view(request):
     return render(request, 'about.html')
