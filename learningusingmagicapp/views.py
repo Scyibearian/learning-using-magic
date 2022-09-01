@@ -43,3 +43,6 @@ def about_view(request):
 
 def ikoria_article_view(request):
     return render(request, 'article/ikoriareich.html')
+
+def google_verif_view(request):
+    return render(request, 'google3ceb8259d9407416.html')

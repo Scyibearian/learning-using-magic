@@ -39,7 +39,10 @@ urlpatterns = [
         name='about'),
     #path('articles', ArticleView.as_view(), name="articles"),
     path('article/ikoria_article', views.ikoria_article_view,
-        name='ikoria_article')
+        name='ikoria_article'),
+
+    path('google3ceb8259d9407416.html', views.google_verif_view,
+        name='google_verif')
 
 ]
 
